@@ -22,7 +22,7 @@ def check_1(lst_obj):
     Алгоритм 1:
     Создать множество из списка
 
-    Сложность: O(1).
+    Сложность: O(n).
     """
     lst_to_set = set(lst_obj)  # O(n)
     return lst_to_set  # O(1)
@@ -40,7 +40,7 @@ def check_2(lst_obj):
     Сложность: O(n).
     """
     for j in range(len(lst_obj)):          # O(n)
-        if lst_obj[j] in lst_obj[j+1:]:    # O(n**2)
+        if lst_obj[j] in lst_obj[j+1:]:    # O(n)
             return False                   # O(1)
     return True                            # O(1)
 

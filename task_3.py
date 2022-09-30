@@ -32,14 +32,14 @@ def dict_():
 sorted_values = sorted(dict_().values())  # O(n*logn)
 new_sorted_list = {}  # O(1)
 for i in sorted_values:  # O(n)
-    for j in dict_().keys():  # O(n^2)
+    for j in dict_().keys():  # O(n)
         if dict_()[j] == i:  # O(1)
             new_sorted_list[j] = dict_()[j]  # O(1)
             break
 top3 = (list(new_sorted_list.items()))[2:]  # O(n)
 for k in enumerate(top3[::-1], 1):  # O(n)
     print(k)
-# итоговая сложность О(n^2)
+# итоговая сложность O(n*logn)
 
 
 #######################################################################################
@@ -48,4 +48,4 @@ sorted_pairs = sorted(list(dict_().items()), key=lambda pair: pair[1], reverse=T
 for g in enumerate(sorted_pairs, 1):  # O(n)
     print(g)
 # итоговая сложность О(n*logn)
-# сложность примера 2 ниже сложности примера 1, т.к. О(n^2) сложнее O(n*logn)
+# сложность примера 2 ниже сложности примера 1, т.к. написано меньше кода

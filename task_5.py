@@ -37,9 +37,19 @@ class StackPlates:
                 elem.append(str(el_))
                 self.elems.append(elem)
 
+    def out(self):
+        for i in self.elems:
+            if len(i) == 1:
+                self.elems.pop()
+        if len(self.elems) > 0:
+            self.elems[-1].pop()
+
 
 b = StackPlates(5)
 b.push(6, "qwert")
 b.push(3, 'dfb')
-b.push(8, 1)
+b.push(4, 1)
+b.out()
+b.out()
+b.out()
 print(b.elems)
