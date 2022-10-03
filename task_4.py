@@ -46,7 +46,7 @@ def repeat():
 
 #########################################################
 def login(key):
-    list_keys = list(log_pass.keys())  # O(1)
+    list_keys = list(log_pass.keys())  # O(n)
     if key in list_keys:  # O(n)
         return key  # O(1)
 
@@ -81,7 +81,7 @@ def authentication2():
     def log(key):
         list_keys = list(log_pass.keys())  # O(1)
         for i in list_keys:  # O(n)
-            if i in list_keys:  # O(n**2)
+            if i in list_keys:  # O(n)
                 return key  # O(1)
 
     user_log = input("input login: ")  # O(1)
